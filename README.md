@@ -1,12 +1,58 @@
-# React + Vite
+# Apple MacBook Pro Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visually stunning, Apple-inspired **MacBook Pro landing page** built with React, Three.js, and GSAP animations.  
+Designed for **desktop** viewing — mobile responsiveness is coming soon.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[https://apple-macbook-page.vercel.app/](https://apple-macbook-page.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
+![MacBook Pro Landing Page Screenshot](public/preview.png)
 
-## Expanding the ESLint configuration
+## ✨ Features
+- **Interactive 3D MacBook Model** with scroll animations
+- **Smooth GSAP animations** for navigation & content
+- **HDR environment lighting** for realistic reflections
+- Apple-style gradients & typography
+- Built with **React Three Fiber** and **@react-three/drei**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+- **React + Vite**
+- **Three.js / @react-three/fiber**
+- **@react-three/drei** (models, controls, textures)
+- **GSAP** for animations
+
+## 📂 Project Structure
+
+
+├── public <br/>
+│ ├── mac.glb # 3D MacBook model <br/>
+│ ├── red.jpg # Screen texture <br/>
+├── src <br/>
+│ ├── components <br/>
+│ │ ├── Header.jsx <br/>
+│ │ ├── MacContainer.jsx <br/>
+│ ├── App.jsx <br/>
+│ ├── index.css <br/>
+│ ├── main.jsx <br/>
+
+
+
+## 📦 Installation & Setup
+# Clone the repository
+git clone https://github.com/rafiqwe/apple-landing-page.git
+cd apple-landing-page
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+##⚠️ Note
+This version is desktop-only. Mobile responsiveness is planned for a future update.
+
+##📜 License
+This project is licensed under the MIT License.
+
+
