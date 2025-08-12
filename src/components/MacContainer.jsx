@@ -1,10 +1,16 @@
 import { useGLTF, useScroll, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+
+// Preload before the component mounts
+useGLTF.preload("/mac.glb");
+useTexture.preload("/red.jpg");
+
 const MacContainer = () => {
-  const model = useGLTF("./mac.glb");
+  const model = useGLTF("/mac.glb");
+  const tex = useTexture("/red.jpg");
   const meshs = [];
-  const tex = useTexture("./red.jpg");
+
   model.scene.traverse((e) => {
     meshs[e.name] = e;
   });
@@ -14,11 +20,13 @@ const MacContainer = () => {
   meshs.matte.material.emissiveIntensity = 0;
   meshs.matte.material.metalness = 0;
   meshs.matte.material.roughness = 0;
+
   const data = useScroll();
 
-  useFrame((state, delta) => {
+  useFrame(() => {
     meshs.screen.rotation.x = THREE.MathUtils.degToRad(180 - data.offset * 90);
   });
+
   return (
     <group position={[0, -15, 20]}>
       <primitive object={model.scene} />
